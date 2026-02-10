@@ -14,8 +14,6 @@ git clone https://github.com/pngthanh/PTGear1.git
 http://localhost/ptgear1/index.php
 
 5. Tài khoản
-Admin
-TK: admin  mk: admin123
+-  Admin  TK: admin  mk: admin123
 
-User
-Tk: user1  mk: user123
+-  User  Tk: user1  mk: user123
