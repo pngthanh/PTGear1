@@ -1,0 +1,147 @@
+.main-content {
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.admin-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.admin-table thead {
+  background: #1f2937;
+  color: white;
+  font-weight: 600;
+}
+
+.admin-table th {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+/* body */
+.admin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* hover */
+.admin-table tbody tr:hover {
+  background: #f3f4f6;
+  transition: 0.2s;
+}
+
+/* Mã đơn hàng */
+.admin-table td:first-child {
+  font-weight: 600;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-action {
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  background: white;
+  border: 1px solid #d1d5db;
+}
+
+.btn-action:hover {
+  opacity: 0.85;
+}
+
+.btn-action[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* view */
+.btn-view {
+  color: white;
+  background: #3b82f6;
+  border-color: transparent;
+}
+
+/* duyệt */
+.btn-approve {
+  color: white;
+  background: #10b981;
+  border-color: transparent;
+}
+
+/* hủy */
+.btn-cancel-admin {
+  color: white;
+  background: #ef4444;
+  border-color: transparent;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-shipping {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-canceled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  table-layout: fixed;
+}
+
+.admin-table thead {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.admin-table tbody {
+  display: block;
+  max-height: 500px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.admin-table tbody tr,
+.admin-table thead tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}

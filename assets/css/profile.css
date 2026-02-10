@@ -1,0 +1,221 @@
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  min-height: calc(100vh - 200px);
+}
+
+/* Bố cục chính */
+.profile-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Menu điều hướng */
+.profile-sidebar {
+  width: 280px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: fit-content;
+  border: 1px solid #e5e7eb;
+}
+
+.sidebar-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.user-icon {
+  font-size: 24px;
+  color: #3b82f6;
+  width: 24px;
+  height: 24px;
+}
+
+.user-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #374151;
+  margin: 0;
+}
+
+/* Navigation Menu */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar-menu .menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.sidebar-menu .menu-item i {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+.sidebar-menu .menu-item:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.sidebar-menu .menu-item.active {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.sidebar-menu .menu-item.active:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.sidebar-menu .menu-item.active i {
+  color: #ffffff;
+}
+
+/*Form cards */
+.profile-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cards container - 2 cột ngang */
+.profile-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Page Header trong main content */
+.profile-header {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.profile-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.profile-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Profile Card */
+.profile-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border: 1px solid #e5e7eb;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Form Styles */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.form-input:disabled {
+  background: #f3f4f6;
+  color: #6b7280;
+  cursor: not-allowed;
+  border-color: #e5e7eb;
+}
+
+/* Form Actions */
+.form-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Buttons */
+.btn-save,
+.btn-change-password {
+  padding: 10px 24px;
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.btn-save:hover,
+.btn-change-password:hover {
+  background: #2563eb;
+}
+
+.btn-save:active,
+.btn-change-password:active {
+  background: #1d4ed8;
+}

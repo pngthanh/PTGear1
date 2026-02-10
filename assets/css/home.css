@@ -1,0 +1,528 @@
+@import url("https://fonts.googleapis.com/css2?family=TikTok+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "TikTok Sans", sans-serif;
+}
+
+/* Main (Banner) */
+.main {
+  width: 100%;
+}
+
+.slideshow {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slideshow img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.slideshow .slide {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slideshow .slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Flash Sale */
+.flash-sale {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.flash-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.flash-title {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 15px;
+}
+
+.flash-sale-img {
+  max-height: 60px;
+  width: auto;
+  display: block;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.timer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.time-box {
+  background-color: #0077b6;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 8px;
+  width: 60px;
+  border: 2px solid #90e0ef;
+  text-align: center;
+}
+
+.time-box span {
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.time-box small {
+  display: block;
+  font-size: 12px;
+  color: #caf0f8;
+  margin-top: 2px;
+}
+
+.flash-divider {
+  border: none;
+  height: 2px;
+  background-color: #ddd;
+  margin: 15px 0;
+}
+
+.flash-container {
+  position: relative;
+}
+
+.flash-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.flash-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.flash-btn.prev {
+  left: 10px;
+}
+
+.flash-btn.next {
+  right: 10px;
+}
+
+.flash-grid {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  flex-wrap: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.flash-sale .flash-item {
+  position: relative;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+.flash-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.flash-item {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  flex-shrink: 0;
+  height: 450px;
+}
+
+.discount-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.flash-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.flash-sale .stock {
+  background-color: #6495ed;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.flash-sale .stock:before {
+  content: "⚡";
+  margin-right: 5px;
+}
+
+.flash-sale .stock.out-of-stock {
+  background-color: #fff44f;
+  color: #000;
+}
+
+.flash-sale .stock.out-of-stock:before {
+  content: "X";
+  margin-right: 5px;
+}
+
+.flash-item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #666;
+  text-decoration: line-through;
+}
+
+.discounted-price {
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.stock {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  gap: 5px;
+  margin-top: auto;
+  flex-wrap: nowrap;
+}
+
+.btn-add {
+  background-color: #d3d3d3;
+  color: #333;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-add:hover {
+  background-color: #c0c0c0;
+}
+
+.btn-buy {
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-buy:hover {
+  background-color: #187bcd;
+}
+
+.flash-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Ưu đãi dành cho bạn */
+.offers {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.offer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.offer-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #4b5eaa;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.offer-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 12px 25px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.tab-button.active {
+  background-color: #4b5eaa;
+  color: #fff;
+  font-weight: bold;
+}
+
+.tab-button:hover {
+  background-color: #e0e7ff;
+  color: #4b5eaa;
+}
+
+.offer-content {
+  position: relative;
+  text-align: center;
+  display: flex;
+}
+
+.product-item {
+  display: none;
+  padding: 20px;
+}
+
+.product-item.active {
+  display: block;
+}
+
+.product-image {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.product-item img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-item h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #4b5eaa;
+}
+
+.product-item p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-info {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.product-info h3 {
+  font-size: 18px;
+  color: #4b5eaa;
+  margin-bottom: 5px;
+}
+
+.product-info .price {
+  font-size: 16px;
+  color: red;
+  font-weight: bold;
+}
+
+.product-item .btn-add {
+  background-color: #d3d3d3;
+  color: #333;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.product-item .btn-add:hover {
+  background-color: #c0c0c0;
+}
+
+.product-item .btn-buy {
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-item .btn-buy:hover {
+  background-color: #187bcd;
+}
+
+.product-item {
+  display: none;
+  padding: 20px;
+}
+
+.product-item.active {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 15px;
+}
+
+.sanpham {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng hover cho phần ưu đãi */
+.sanpham:hover {
+  transform: translateY(-5px);
+}
+
+.product-name-link {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.product-name-link:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+/* Thêm vào home.css */
+.flash-item .button-group {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.flash-item .btn-add {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 5px;
+  border-radius: 6px;
+  font-weight: 600;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.flash-item .btn-add:hover {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+}
+
+.flash-item .btn-buy {
+  flex: 1;
+}
